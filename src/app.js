@@ -40,7 +40,7 @@ app.get("/fuserd", async(req,res)=>{
         // const _id = req.params.id;
       const usrData = await UserData.find();
       
-      console.log(usrData);
+    //   console.log(usrData);
       res.send(usrData);
     }catch(e){
         res.status(500).send(e);
@@ -74,7 +74,7 @@ app.post("/Login", async(req,res)=>{
 
        
         const gentoken = await usr.generateAuthToken();
-        console.log("gentoken is" + gentoken);
+        // console.log("gentoken is" + gentoken);
         res.cookie("jwto", gentoken, {
      
             httpOnly:true 
